@@ -1,4 +1,4 @@
-percore
+Percore
 =======
 
-Percore Server
+Welcome to the Percore Server.
