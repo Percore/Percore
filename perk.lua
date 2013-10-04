@@ -1,6 +1,10 @@
+--Kvar att göra: 
+--Arrows för Hunter/Warrior/Rogues. Detta beror på vilket vapen de ska få börja med!
+
+
 function PerkTest_OnGossipTalk(item, event, player, pMisc) 
 local race = player:GetPlayerRace()
-local class = player:GetPlayerClass() -- För Starting Gear
+local class = player:GetPlayerClass()
 if (player:IsInCombat() == true) then
 player:SendAreaTriggerMessage("You are in combat!")
 else
@@ -140,12 +144,11 @@ function PerkTest_OnGossipSelect(item, event, player, id, intid, code, pMisc)
 	   end
 	  
 	  -- Gear beroende på class+specc
-	  if(intid == 11) then --Arrows för Hunter/Warrior/Rogues. Detta beror på vilket vapen de ska få börja med!
+	  if(intid == 11) then 
 	  if class == "Warrior" then
 	  item:GossipCreateMenu(2, player, 0)
 	  item:GossipMenuAddItem(10, "I Would Like To Have DPS Gear", 80, 0)
 	  item:GossipMenuAddItem(10, "I Would Like To Have Tank Gear", 81, 0)
-	  --item:GossipMenuAddItem(10, "Black Temple", 49, 0)
 	  end
 	  if class == "Paladin" then
 	  item:GossipCreateMenu(2, player, 0)
